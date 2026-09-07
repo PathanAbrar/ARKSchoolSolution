@@ -742,3 +742,24 @@ footer {
   .hero { padding-top: 2.5rem; }
   .footer-container { flex-direction: column; text-align: center; }
 }
+/* Modern Scroll-Driven Reveal Effect */
+@keyframes scrollFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply subtle scroll animation to key sections & cards */
+.scroll-reveal,
+.service-card,
+.faq-item,
+.feature-item {
+  animation: scrollFadeUp linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 25%;
+}
